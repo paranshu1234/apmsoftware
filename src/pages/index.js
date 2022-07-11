@@ -1,121 +1,115 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
+import styled from "styled-components"
 import Layout from "../components/layout"
+import LogoList from "../components/logolist"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
+import ImagesArea from "../components/imagesarea"
+import OurServices from "../components/ourservices"
+import GetStarted from "../components/getstarted"
+import CaseStudies from "../components/casestudies"
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
+const ContainerBanner = styled.section`
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+`
+
+const ImageContainer = styled.div`
+  max-width: 600px;
+`
+
+const Title = styled.span`
+  display: block;
+  font-weight: bold;
+  font-size: 2.8em;
+  line-height: 1.4em;
+`
+
+const ContentContainer = styled.div`
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+`
+
+const TextContent = styled.div``
+
+const Paragraph = styled.p`
+  color: var(--text-gray);
+  font-size: 1.2em;
+  line-height: 1.4em;
+`
+
+const Button = styled.button`
+  border: none;
+  background: var(--bg-gradient-indigo);
+  cursor: pointer;
+  margin: 2rem 0;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-family: var(--font-poppins);
+  font-weight: bold;
+  box-shadow: var(--box-shadow);
+  color: white;
+  transition: 0.4s linear;
+
+  :hover {
+    transform: translateY(-5px);
+  }
+`
+
+const SmallTitle = styled.p`
+  color: var(--text-red);
+  font-size: 1em;
+  line-height: 1.8em;
+`
+
+const LogosListSection = styled.section`
+  width: 100%;
+  height: 40vh;
+`
+
 const IndexPage = () => (
   <Layout>
-    <Seo title="Award Winning AR/VR Development Company | APM Software" />
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+    <Seo title="Award Winning AR/VR Development Company" />
+    <ContainerBanner>
+      <ContentContainer>
+        <TextContent>
+          <SmallTitle>Leading AR/VR Development Company</SmallTitle>
+          <Title>We help businesses</Title>
+          <Title>create virtual experiences</Title>
+          <Paragraph>
+            APM excels at creating outstanding virtual experiences
+          </Paragraph>
+          <Button>Let's Get Started!</Button>
+        </TextContent>
+        <ImageContainer>
+          <StaticImage
+            src="../images/console-dev.jpg"
+            loading="lazy"
+            placeholder="blurred"
+            quality={95}
+            formats={["auto", "webp", "avif"]}
+            alt="Banner Image"
+            style={{ marginBottom: `var(--space-3)` }}
+          />
+        </ImageContainer>
+      </ContentContainer>
+    </ContainerBanner>
+    <LogosListSection>
+      <LogoList />
+    </LogosListSection>
+    <ImagesArea />
+    <OurServices></OurServices>
+    <CaseStudies />
+    <GetStarted />
   </Layout>
 )
 
