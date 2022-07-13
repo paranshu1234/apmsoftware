@@ -5,8 +5,6 @@ import { Link } from "gatsby"
 const Foot = styled.footer`
   height: 80vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   background-color: var(--bg-blue);
   border-top: 1px solid var(--text-red);
 `
@@ -19,19 +17,24 @@ const FooterContent = styled.div`
   align-items: start;
   margin: 0 auto;
   grid-template-columns: repeat(3, minmax(10px, 1fr));
-  grid-template-rows: min-content minmax(10px, 1fr);
+  grid-template-rows: min-content minmax(10px, 1fr) auto;
   max-width: 1080px;
   flex-grow: 1;
 `
 
 const FooterBottomContent = styled.div`
-  display: flex;
   width: 100%;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em 8em;
   border-top: 1px solid var(--text-red);
   flex-flow: row wrap;
+  margin-top: 2em;
+  padding-top: 1em;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 `
 
 const ServicesContainer = styled.div`
@@ -53,7 +56,7 @@ const InsightsContainer = styled.div`
 `
 
 const CompanyLogoContainer = styled.div`
-  padding: 1rem 0;
+  padding: 2rem 0;
   width: min-content;
   max-height: min-content;
 `
@@ -65,6 +68,24 @@ const CompanyInfoContainer = styled.div`
   grid-row-end: 3;
 
   flex-direction: column;
+`
+
+const Heading = styled.h3`
+  padding: 0.6em 0;
+
+  font-size: 1em;
+  color: var(--text-dark);
+`
+
+const Paragraph = styled.p`
+  line-height: 1.8em;
+  padding: 0.3em 0;
+  color: var(--text-gray);
+`
+
+const SmallText = styled.small`
+  padding-left: 1em;
+  color: var(--text-gray);
 `
 
 const Footer = () => {
@@ -1083,45 +1104,45 @@ const Footer = () => {
           </Link>
         </CompanyLogoContainer>
         <CompanyInfoContainer>
-          <h3>Contact Information</h3>
-          <span>info@apmsoftware.co.in</span>
-          <h3>Follow Us</h3>
-          <p>Facebook</p>
-          <p>LinkedIn</p>
-          <p>Instagram</p>
-          <p>Youtube</p>
+          <Heading>Contact Information</Heading>
+          <Paragraph>info@apmsoftware.co.in</Paragraph>
+          <Heading>Follow Us</Heading>
+          <Paragraph>Facebook</Paragraph>
+          <Paragraph>LinkedIn</Paragraph>
+          <Paragraph>Instagram</Paragraph>
+          <Paragraph>Youtube</Paragraph>
         </CompanyInfoContainer>
         <ServicesContainer>
-          <h3>Services</h3>
-          <span>Immersive Training</span>
-          <span>XR marketing</span>
-          <span>3D Modeling</span>
-          <span>Virutal Reality</span>
-          <span>Agumented Reality</span>
-          <span>Retail Store Virtualization</span>
-          <span>WebAR and NativeAR</span>
-          <span>Metaverse Services for Enterprise</span>
+          <Heading>Services</Heading>
+          <Paragraph>Immersive Training</Paragraph>
+          <Paragraph>XR marketing</Paragraph>
+          <Paragraph>3D Modeling</Paragraph>
+          <Paragraph>Virutal Reality</Paragraph>
+          <Paragraph>Agumented Reality</Paragraph>
+          <Paragraph>Retail Store Virtualization</Paragraph>
+          <Paragraph>WebAR and NativeAR</Paragraph>
+          <Paragraph>Metaverse Services for Enterprise</Paragraph>
         </ServicesContainer>
         <InsightsContainer>
-          <h3>Insights</h3>
-          <span>Case Studies</span>
-          <span>Newsroom</span>
-          <span>Blogs</span>
+          <Heading>Insights</Heading>
+          <Paragraph>Case Studies</Paragraph>
+          <Paragraph>Newsroom</Paragraph>
+          <Paragraph>Blogs</Paragraph>
         </InsightsContainer>
+        <FooterBottomContent>
+          {" "}
+          <span>
+            <SmallText>
+              &copy; {new Date().getFullYear()} &middot; All Rights Reserved.
+              APM Software
+            </SmallText>
+          </span>
+          <span>
+            <SmallText>Terms of Service</SmallText>
+            <SmallText>Privacy Policy</SmallText>
+          </span>
+        </FooterBottomContent>
       </FooterContent>
-      <FooterBottomContent>
-        {" "}
-        <span>
-          <small>
-            &copy; {new Date().getFullYear()} &middot; All Rights Reserved.
-          </small>
-          <small>APM Software</small>
-        </span>
-        <span>
-          <small>Terms of Service</small>
-          <small>Privacy Policy</small>
-        </span>
-      </FooterBottomContent>
     </Foot>
   )
 }
