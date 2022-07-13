@@ -8,16 +8,19 @@ const Foot = styled.footer`
   display: flex;
   flex-direction: column;
   background-color: var(--bg-blue);
-  border-top: 2px solid var(--text-light);
+  border-top: 1px solid var(--text-red);
 `
 
 const FooterContent = styled.div`
   width: inherit;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 4em 8em;
-  flex-flow: row wrap;
+  display: grid;
+  justify-items: start;
+  justify-content: start;
+  align-items: start;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, minmax(10px, 1fr));
+  grid-template-rows: min-content minmax(10px, 1fr);
+  max-width: 1080px;
   flex-grow: 1;
 `
 
@@ -32,36 +35,43 @@ const FooterBottomContent = styled.div`
 `
 
 const ServicesContainer = styled.div`
-  flex-direction: column;
-  height: 80%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
-  margin: 0 2em;
 `
 
 const InsightsContainer = styled.div`
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
   flex-direction: column;
-  height: 40%;
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  margin: 0 2em;
 `
 
-const CompanyContainer = styled.div`
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
+const CompanyLogoContainer = styled.div`
+  padding: 1rem 0;
+  width: min-content;
+  max-height: min-content;
+`
+
+const CompanyInfoContainer = styled.div`
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
   flex-direction: column;
-  margin: 0 2em;
 `
 
 const Footer = () => {
   return (
     <Foot>
       <FooterContent>
-        <CompanyContainer>
+        <CompanyLogoContainer>
           <Link
             to="/"
             style={{
@@ -1071,6 +1081,8 @@ const Footer = () => {
               </defs>
             </svg>
           </Link>
+        </CompanyLogoContainer>
+        <CompanyInfoContainer>
           <h3>Contact Information</h3>
           <span>info@apmsoftware.co.in</span>
           <h3>Follow Us</h3>
@@ -1078,7 +1090,7 @@ const Footer = () => {
           <p>LinkedIn</p>
           <p>Instagram</p>
           <p>Youtube</p>
-        </CompanyContainer>
+        </CompanyInfoContainer>
         <ServicesContainer>
           <h3>Services</h3>
           <span>Immersive Training</span>

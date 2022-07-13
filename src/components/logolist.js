@@ -2,12 +2,13 @@ import React from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   margin: 0 auto;
   padding: 0 1em;
-  max-width: 1024px;
+  max-width: 1090px;
   text-align: center;
-  box-shadow: var(--box-shadow);
-  border-radius: 8px;
 `
 
 const Itemwrapper = styled.div`
@@ -25,11 +26,18 @@ const Logowrapper = styled.div`
   }
 `
 
+const Heading = styled.h1`
+  font-size: 1.5em;
+  line-height: 1.2em;
+  color: var(--text-dark);
+`
+
 const SVG = styled.svg``
 
 const logolist = () => {
   return (
     <Container>
+      <Heading>Trusted By</Heading>
       <Itemwrapper>
         <LogoImage>
           <Logowrapper>

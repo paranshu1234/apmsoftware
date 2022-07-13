@@ -6,10 +6,23 @@ const Container = styled.section`
   padding: 0 12em;
 `
 
+const Heading = styled.h1`
+  font-size: 3em;
+  line-height: 1.2em;
+  color: var(--text-dark);
+`
+
+const SubTitle = styled.h3`
+  font-size: 1em;
+  padding: 2em 0;
+  color: var(--text-red);
+`
+
 const CaseStudies = () => {
   return (
     <Container>
-      <span>Case Studies </span>
+      <Heading>Case Studies</Heading>
+      <SubTitle>See Our Past Work</SubTitle>
     </Container>
   )
 }

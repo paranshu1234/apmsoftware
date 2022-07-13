@@ -39,6 +39,30 @@ const ContentContainer = styled.div`
   flex-flow: row wrap;
 `
 
+const Heading = styled.h1`
+  font-size: 3em;
+  line-height: 1.2em;
+  color: var(--text-dark);
+`
+
+const SubTitle = styled.h3`
+  font-size: 1em;
+  color: var(--text-red);
+`
+
+const SubTitleContainer = styled.div`
+  background: var(--bg-red);
+  width: fit-content;
+  padding: 1em;
+  border-radius: 20px;
+`
+
+const BannerTextSmall = styled.p`
+  line-height: 1.8em;
+  padding: 2em 0;
+  color: var(--text-gray);
+`
+
 const TextContent = styled.div``
 
 const Paragraph = styled.p`
@@ -74,6 +98,7 @@ const SmallTitle = styled.p`
 const LogosListSection = styled.section`
   width: 100%;
   height: 40vh;
+  padding: 2em 0;
 `
 
 const IndexPage = () => (
@@ -82,18 +107,21 @@ const IndexPage = () => (
     <ContainerBanner>
       <ContentContainer>
         <TextContent>
-          <SmallTitle>Leading AR/VR Development Company</SmallTitle>
-          <Title>We help businesses</Title>
-          <Title>create virtual experiences</Title>
-          <Paragraph>
+          <SubTitleContainer>
+            <SubTitle>Leading AR/VR Development Company</SubTitle>
+          </SubTitleContainer>
+          <Heading>We help businesses</Heading>
+          <Heading>create virtual experiences</Heading>
+          <BannerTextSmall>
             APM excels at creating outstanding virtual experiences
-          </Paragraph>
+          </BannerTextSmall>
           <Button>Let's Get Started!</Button>
         </TextContent>
         <ImageContainer>
           <StaticImage
-            src="../images/console-dev.jpg"
+            src="../images/Hero.webp"
             loading="lazy"
+            height={500}
             placeholder="blurred"
             quality={95}
             formats={["auto", "webp", "avif"]}

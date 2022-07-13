@@ -4,8 +4,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const Head = styled.header`
-  margin: 0 auto;
-  width: 98%;
+  width: 100%;
   padding: 0 8em;
   @media (min-width: 640px) {
     .container {
@@ -101,23 +100,26 @@ const Head = styled.header`
     }
   }
 `
-const Navigation = styled.nav`
+
+const HeaderContianer = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  align-items: center;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1rem 1rem;
 `
 
-const NavLinks = styled.div`
+const NavLinks = styled.nav`
+  width: 60%;
+  padding: 0 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-grow: 1;
-  max-width: 30%;
 `
 const StyledLinkItem = styled(Link)`
   color: var(--text-dark2);
-  font-weight: bold;
+  font-family: "system-ui";
 
   :hover {
     color: var(--text-red);
@@ -125,6 +127,7 @@ const StyledLinkItem = styled(Link)`
 `
 
 const Button = styled.button`
+  min-width: 20px;
   border: none;
   background: var(--bg-gradient-indigo);
   cursor: pointer;
@@ -143,7 +146,7 @@ const Button = styled.button`
 
 const Header = () => (
   <Head>
-    <Navigation>
+    <HeaderContianer>
       <div class="nav-brand">
         <Link
           to="/"
@@ -1159,7 +1162,6 @@ const Header = () => (
         <StyledLinkItem
           to="/"
           style={{
-            fontSize: `var(--font-sm)`,
             textDecoration: `none`,
           }}
         >
@@ -1168,7 +1170,6 @@ const Header = () => (
         <StyledLinkItem
           to="/"
           style={{
-            fontSize: `var(--font-sm)`,
             textDecoration: `none`,
           }}
         >
@@ -1177,7 +1178,6 @@ const Header = () => (
         <StyledLinkItem
           to="/about"
           style={{
-            fontSize: `var(--font-sm)`,
             textDecoration: `none`,
           }}
         >
@@ -1186,7 +1186,6 @@ const Header = () => (
         <StyledLinkItem
           to="/"
           style={{
-            fontSize: `var(--font-sm)`,
             textDecoration: `none`,
           }}
         >
@@ -1195,19 +1194,14 @@ const Header = () => (
         <StyledLinkItem
           to="/career/"
           style={{
-            fontSize: `var(--font-sm)`,
             textDecoration: `none`,
           }}
         >
           Career
         </StyledLinkItem>
       </NavLinks>
-      <div class="flex-initial">
-        <ul class="flex">
-          <Button>Contact Us</Button>
-        </ul>
-      </div>
-    </Navigation>
+      <Button>Contact Us</Button>
+    </HeaderContianer>
   </Head>
 )
 
