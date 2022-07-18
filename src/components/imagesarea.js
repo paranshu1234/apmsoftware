@@ -6,39 +6,13 @@ const ImagesSection = styled.section`
   width: 100%;
   margin: 0 auto;
   display: grid;
+  place-items: center;
   max-width: 1080px;
-  column-gap: 10px;
+  column-gap: 20px;
   grid-template-columns: repeat(2, minmax(10px, 1fr));
 `
 
-const ImagesGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(16, minmax(10px, 1fr));
-  grid-template-rows: repeat(8, minmax(100px, 1fr));
-`
-
-const ImageOne = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 8;
-  grid-row-start: 2;
-  grid-row-end: 5;
-  background-size: cover;
-  border-radius: 8px;
-  filter: blur(0.6px);
-`
-const ImageTwo = styled.div`
-  display: flex;
-  grid-column-start: 9;
-  grid-column-end: 16;
-  grid-row-start: 1;
-  grid-row-end: 4;
-  background-size: cover;
-  border-radius: 8px;
-  filter: blur(0.6px);
-`
 const ImageThree = styled.div`
-  grid-area: 3 / 2 / 8 / 10;
-  background-size: cover;
   border-radius: 8px;
   z-index: 99;
 `
@@ -72,42 +46,21 @@ const Paragraph = styled.p`
 const ImagesArea = () => {
   return (
     <ImagesSection>
-      <ImagesGrid>
-        <ImageOne>
-          <StaticImage
-            src="../images/console-dev.jpg"
-            loading="lazy"
-            placeholder="blurred"
-            quality={95}
-            formats={["auto", "webp", "avif"]}
-            alt="Banner Image"
-          />
-        </ImageOne>
-        <ImageTwo>
-          <StaticImage
-            src="../images/Augmented-Reality.png"
-            loading="lazy"
-            placeholder="blurred"
-            quality={95}
-            formats={["auto", "webp", "avif"]}
-            alt="Banner Image"
-          />
-        </ImageTwo>
-        <ImageThree>
-          <StaticImage
-            src="../images/unreal5.jpg"
-            loading="lazy"
-            placeholder="blurred"
-            quality={95}
-            formats={["auto", "webp", "avif"]}
-            alt="Banner Image"
-            style={{
-              borderRadius: "10px",
-              backgroundSize: "cover",
-            }}
-          />
-        </ImageThree>
-      </ImagesGrid>
+      <ImageThree>
+        <StaticImage
+          src="../images/headset.jpg"
+          loading="lazy"
+          placeholder="blurred"
+          quality={95}
+          formats={["auto", "webp", "avif"]}
+          alt="Banner Image"
+          style={{
+            borderRadius: "10px",
+            backgroundSize: "cover",
+          }}
+        />
+      </ImageThree>
+
       <Content>
         <SubTitleContainer>
           <SubTitle>Metaverse Development Company</SubTitle>

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const Container = styled.section`
   position: relative;
@@ -29,15 +29,22 @@ const Card = styled.div`
 
 const Heading = styled.h1`
   z-index: 1;
-  margin: 1em 0;
+  font-size: 2em;
+  line-height: 1.2em;
+  color: var(--text-dark);
+  margin: 1em 0 0.4em 0;
 `
 
 const Paragraph = styled.p`
   z-index: 1;
-  padding: 1em 0;
+  font-size: 1.2em;
+
+  padding: 0 0 1em 0;
+  color: var(--text-gray);
 `
 const Button = styled.button`
-  z-index: 1;
+  margin: 2em 0;
+  z-index: 2;
   border: none;
   background: var(--bg-gradient-indigo);
   cursor: pointer;
@@ -54,16 +61,29 @@ const Button = styled.button`
   }
 `
 
+const StyledLinkItem = styled(Link)`
+  z-index: 4;
+  color: var(--text-dark2);
+  font-family: "system-ui";
+`
+
 function GetStarted() {
   return (
     <Container>
       <Card>
-        <Heading>Get Started</Heading>
+        <Heading>Get in touch</Heading>
         <Paragraph>
-          You're here for answers. We're here to help. Dig into our resources
-          section or chat with a friendly expert.
+          Reach out to discuss your business needs and to learn how we can help
+          you grow.
         </Paragraph>
-        <Button>Get Started</Button>
+        <StyledLinkItem
+          to="/contact/"
+          style={{
+            textDecoration: `none`,
+          }}
+        >
+          <Button>Let's Connect</Button>
+        </StyledLinkItem>
       </Card>
       <svg
         xmlns="http://www.w3.org/2000/svg"
