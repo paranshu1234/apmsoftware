@@ -16,6 +16,7 @@ import Footer from "./footer"
 const GlobalStyle = createGlobalStyle`
   :root {
     --text-gray : #808291;
+    --text-link: #dd2476;
     --text-white: #f8f9fa;
     --text-light: #f6f6f6;
     --text-dark : #15274F;

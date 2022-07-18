@@ -125,9 +125,10 @@ const NavLinks = styled.nav`
 const StyledLinkItem = styled(Link)`
   color: var(--text-dark2);
   font-family: "system-ui";
+  transition: all 0.3s ease;
 
   :hover {
-    color: var(--text-red);
+    color: var(--text-link);
   }
 `
 
