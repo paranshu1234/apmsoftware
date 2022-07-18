@@ -25,13 +25,6 @@ const ImageContainer = styled.div`
   max-width: 600px;
 `
 
-const Title = styled.span`
-  display: block;
-  font-weight: bold;
-  font-size: 2.8em;
-  line-height: 1.4em;
-`
-
 const ContentContainer = styled.div`
   justify-content: center;
   align-items: center;
@@ -41,12 +34,13 @@ const ContentContainer = styled.div`
 
 const Heading = styled.h1`
   font-size: 3em;
+
   line-height: 1.2em;
   color: var(--text-dark);
 `
 
 const SubTitle = styled.h3`
-  font-size: 1em;
+  font-size: 0.8em;
   color: var(--text-red);
 `
 
@@ -55,21 +49,17 @@ const SubTitleContainer = styled.div`
   width: fit-content;
   padding: 1em;
   border-radius: 20px;
+  margin-bottom: 1em;
 `
 
 const BannerTextSmall = styled.p`
   line-height: 1.8em;
-  padding: 2em 0;
+  font-size: 1.2em;
+  padding: 1em 0;
   color: var(--text-gray);
 `
 
 const TextContent = styled.div``
-
-const Paragraph = styled.p`
-  color: var(--text-gray);
-  font-size: 1.2em;
-  line-height: 1.4em;
-`
 
 const Button = styled.button`
   border: none;
@@ -89,21 +79,24 @@ const Button = styled.button`
   }
 `
 
-const SmallTitle = styled.p`
-  color: var(--text-red);
-  font-size: 1em;
-  line-height: 1.8em;
-`
-
 const LogosListSection = styled.section`
   width: 100%;
   height: 40vh;
   padding: 2em 0;
 `
 
+const StyledLinkItem = styled(Link)`
+  color: var(--text-dark2);
+  font-family: "system-ui";
+
+  :hover {
+    color: var(--text-red);
+  }
+`
+
 const IndexPage = () => (
   <Layout>
-    <Seo title="Award Winning AR/VR Development Company" />
+    <Seo title="Leading AR/VR Metaverse Development Company" />
     <ContainerBanner>
       <ContentContainer>
         <TextContent>
@@ -115,7 +108,14 @@ const IndexPage = () => (
           <BannerTextSmall>
             APM excels at creating outstanding virtual experiences
           </BannerTextSmall>
-          <Button>Let's Get Started!</Button>
+          <StyledLinkItem
+            to="/contact/"
+            style={{
+              textDecoration: `none`,
+            }}
+          >
+            <Button>Let's Get Started!</Button>
+          </StyledLinkItem>
         </TextContent>
         <ImageContainer>
           <StaticImage

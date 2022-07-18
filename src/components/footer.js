@@ -1,12 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faLinkedin,
+  faFacebook,
+  faYoutube,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons"
 
 const Foot = styled.footer`
   height: 80vh;
   width: 100%;
   background-color: var(--bg-blue);
-  border-top: 1px solid var(--text-red);
 `
 
 const FooterContent = styled.div`
@@ -83,10 +89,32 @@ const Paragraph = styled.p`
   color: var(--text-gray);
 `
 
+const FooterLinks = styled.p`
+  line-height: 1.8em;
+  padding: 0.3em 0;
+  color: var(--text-gray);
+
+  transition: all 0.3s ease;
+  :hover {
+    color: #dd2476;
+  }
+`
+
 const SmallText = styled.small`
   padding-left: 1em;
   color: var(--text-gray);
 `
+const StyledIcon = styled(FontAwesomeIcon)`
+  color: var(--text-gray);
+  margin-right: 0.6em;
+  font-size: 1.8em;
+  transition: all 0.3s ease;
+  :hover {
+    color: #dd2476;
+  }
+`
+
+const StyledLinkItem = styled(Link)``
 
 const Footer = () => {
   return (
@@ -1105,29 +1133,58 @@ const Footer = () => {
         </CompanyLogoContainer>
         <CompanyInfoContainer>
           <Heading>Contact Information</Heading>
+          <Paragraph>
+            Sangath-2, C-209, Motera Stadium Rd,
+            <br /> Sabarmati, Ahmedabad, Gujarat 380005
+          </Paragraph>
           <Paragraph>info@apmsoftware.co.in</Paragraph>
+
           <Heading>Follow Us</Heading>
-          <Paragraph>Facebook</Paragraph>
-          <Paragraph>LinkedIn</Paragraph>
-          <Paragraph>Instagram</Paragraph>
-          <Paragraph>Youtube</Paragraph>
+          <StyledLinkItem to="https://www.linkedin.com/company/apm-software/about/?viewAsMember=true">
+            <StyledIcon icon={faLinkedin} />
+          </StyledLinkItem>
+          <StyledLinkItem to="https://www.facebook.com/apmsoftwarein">
+            <StyledIcon icon={faFacebook} />
+          </StyledLinkItem>
+          <StyledLinkItem to="https://www.youtube.com/channel/UCh9UEbJBS14bJ0e4KzAQtlQ/featured">
+            <StyledIcon icon={faYoutube} />
+          </StyledLinkItem>
+          <StyledLinkItem to="https://www.instagram.com/apm.software/">
+            <StyledIcon icon={faInstagram} />
+          </StyledLinkItem>
         </CompanyInfoContainer>
         <ServicesContainer>
           <Heading>Services</Heading>
-          <Paragraph>Immersive Training</Paragraph>
-          <Paragraph>XR marketing</Paragraph>
-          <Paragraph>3D Modeling</Paragraph>
-          <Paragraph>Virutal Reality</Paragraph>
-          <Paragraph>Agumented Reality</Paragraph>
-          <Paragraph>Retail Store Virtualization</Paragraph>
-          <Paragraph>WebAR and NativeAR</Paragraph>
-          <Paragraph>Metaverse Services for Enterprise</Paragraph>
+          <StyledLinkItem to="/services">
+            <FooterLinks>XR marketing</FooterLinks>
+          </StyledLinkItem>
+          <StyledLinkItem to="/services">
+            <FooterLinks>3D Modeling</FooterLinks>
+          </StyledLinkItem>
+          <StyledLinkItem to="/services">
+            <FooterLinks>Virutal Reality</FooterLinks>
+          </StyledLinkItem>
+          <StyledLinkItem to="/services">
+            <FooterLinks>Agumented Reality</FooterLinks>
+          </StyledLinkItem>
+          <StyledLinkItem to="/services">
+            <FooterLinks>Retail Store Virtualization</FooterLinks>
+          </StyledLinkItem>
+          <StyledLinkItem to="/services">
+            <FooterLinks>WebAR and NativeAR</FooterLinks>
+          </StyledLinkItem>
+          <StyledLinkItem to="/services">
+            <FooterLinks>Metaverse Services for Enterprise</FooterLinks>
+          </StyledLinkItem>
         </ServicesContainer>
         <InsightsContainer>
           <Heading>Insights</Heading>
-          <Paragraph>Case Studies</Paragraph>
-          <Paragraph>Newsroom</Paragraph>
-          <Paragraph>Blogs</Paragraph>
+          <StyledLinkItem to="/case-studies">
+            <FooterLinks>Case Studies</FooterLinks>
+          </StyledLinkItem>
+          <StyledLinkItem to="/about">
+            <FooterLinks>Meet Our Team</FooterLinks>
+          </StyledLinkItem>
         </InsightsContainer>
         <FooterBottomContent>
           {" "}

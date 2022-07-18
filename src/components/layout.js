@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     --text-gray : #808291;
     --text-white: #f8f9fa;
     --text-light: #f6f6f6;
-    --text-dark : #1A3260;
+    --text-dark : #15274F;
     --text-dark2 : #1A3760D4;
     --text-red : #ff4d6d;
     --box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
@@ -69,6 +69,7 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+
       <div
         style={{
           margin: `0 auto`,
