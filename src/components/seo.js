@@ -83,6 +83,14 @@ function Seo({ description, lang, meta, title, image }) {
                   content: `${site.siteMetadata?.siteUrl}${defaultImage}`,
                 },
                 {
+                  property: "og:image:width",
+                  content: 750,
+                },
+                {
+                  property: "og:image:height",
+                  content: 400,
+                },
+                {
                   name: "twitter:card",
                   content: "summary_large_image",
                 },
