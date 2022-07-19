@@ -15,14 +15,16 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const ContainerBanner = styled.section`
   width: 100%;
-  height: 60vh;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: start;
 `
 
 const ImageContainer = styled.div`
-  max-width: 600px;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
 `
 
 const ContentContainer = styled.div`
@@ -30,6 +32,10 @@ const ContentContainer = styled.div`
   align-items: center;
   display: flex;
   flex-flow: row wrap;
+
+  @media screen and (max-width: 576px) {
+    padding: 0 2rem;
+  }
 `
 
 const Heading = styled.h1`
@@ -37,19 +43,31 @@ const Heading = styled.h1`
 
   line-height: 1.2em;
   color: var(--text-dark);
+  @media screen and (max-width: 576px) {
+    text-align: center;
+    line-height: 1em;
+  }
 `
 
 const SubTitle = styled.h3`
   font-size: 0.8em;
   color: var(--text-red);
+
+  @media screen and (max-width: 576px) {
+    text-align: center;
+    font-size: 1.2em;
+  }
 `
 
 const SubTitleContainer = styled.div`
   background: var(--bg-red);
-  width: fit-content;
-  padding: 1em;
+  width: 100%;
   border-radius: 20px;
   margin-bottom: 1em;
+
+  @media screen and (max-width: 576px) {
+    padding: 0.8em;
+  }
 `
 
 const BannerTextSmall = styled.p`
@@ -57,9 +75,22 @@ const BannerTextSmall = styled.p`
   font-size: 1.2em;
   padding: 1em 0;
   color: var(--text-gray);
+
+  @media screen and (max-width: 576px) {
+    font-size: 1.4em;
+    text-align: center;
+  }
 `
 
-const TextContent = styled.div``
+const TextContent = styled.div`
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`
 
 const Button = styled.button`
   border: none;
@@ -77,11 +108,16 @@ const Button = styled.button`
   :hover {
     transform: translateY(-5px);
   }
+
+  @media screen and (max-width: 576px) {
+    margin: 2rem auto;
+    text-align: center;
+  }
 `
 
 const LogosListSection = styled.section`
   width: 100%;
-  height: 40vh;
+  min-height: 40vh;
   padding: 2em 0;
 `
 

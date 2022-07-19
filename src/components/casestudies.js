@@ -5,24 +5,41 @@ import { StaticImage } from "gatsby-plugin-image"
 const Container = styled.section`
   text-align: start;
   padding: 0 12em;
+  @media screen and (max-width: 576px) {
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 const Heading = styled.h1`
   font-size: 3em;
   line-height: 1.2em;
   color: var(--text-dark);
+  @media screen and (max-width: 576px) {
+    font-size: 3em;
+  }
 `
 
 const CaseStudyHeading = styled.h1`
   font-size: 2em;
   line-height: 1.2em;
   color: var(--text-dark);
+  @media screen and (max-width: 576px) {
+    font-size: 2.6em;
+  }
 `
 
 const SubTitle = styled.h3`
   font-size: 1em;
   padding: 2em 0;
   color: var(--text-red);
+  @media screen and (max-width: 576px) {
+    padding: 1em 0;
+    font-size: 2em;
+  }
 `
 
 const SubTitleContainer = styled.div`
@@ -46,12 +63,19 @@ const Paragraph = styled.p`
   line-height: 1.8em;
   padding: 2em 0;
   color: var(--text-gray);
+  @media screen and (max-width: 576px) {
+    font-size: 2em;
+  }
 `
 
 const CaseStudyCard = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `
 
 const CaseStudyContent = styled.div`
