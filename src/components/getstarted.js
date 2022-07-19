@@ -34,7 +34,7 @@ const Heading = styled.h1`
   color: var(--text-dark);
   margin: 1em 0 0.4em 0;
   @media screen and (max-width: 576px) {
-    font-size: 2.4em;
+    font-size: 1.6em;
     text-align: center;
     line-height: 1.5em;
   }
@@ -47,7 +47,7 @@ const Paragraph = styled.p`
   padding: 0 0 1em 0;
   color: var(--text-gray);
   @media screen and (max-width: 576px) {
-    font-size: 1.6em;
+    font-size: 1em;
     text-align: center;
     line-height: 1.5em;
   }
@@ -71,7 +71,6 @@ const Button = styled.button`
   }
 
   @media screen and (max-width: 576px) {
-    font-size: 1.6em;
     width: 100%;
     text-align: center;
     line-height: 1.5em;

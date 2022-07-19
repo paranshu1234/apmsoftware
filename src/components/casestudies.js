@@ -19,7 +19,7 @@ const Heading = styled.h1`
   line-height: 1.2em;
   color: var(--text-dark);
   @media screen and (max-width: 576px) {
-    font-size: 3em;
+    font-size: 1.8em;
   }
 `
 
@@ -28,7 +28,7 @@ const CaseStudyHeading = styled.h1`
   line-height: 1.2em;
   color: var(--text-dark);
   @media screen and (max-width: 576px) {
-    font-size: 2.6em;
+    font-size: 1.6em;
   }
 `
 
@@ -38,24 +38,8 @@ const SubTitle = styled.h3`
   color: var(--text-red);
   @media screen and (max-width: 576px) {
     padding: 1em 0;
-    font-size: 2em;
+    font-size: 1.6em;
   }
-`
-
-const SubTitleContainer = styled.div`
-  width: fit-content;
-  border-radius: 20px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const SubTitleLine = styled.div`
-  height: 3px;
-  width: 2em;
-  margin: 0 0.6em;
-  background-color: var(--text-red);
 `
 
 const Paragraph = styled.p`
@@ -64,7 +48,7 @@ const Paragraph = styled.p`
   padding: 2em 0;
   color: var(--text-gray);
   @media screen and (max-width: 576px) {
-    font-size: 2em;
+    font-size: 1em;
   }
 `
 

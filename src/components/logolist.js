@@ -41,7 +41,7 @@ const Heading = styled.h1`
   line-height: 1.2em;
   color: var(--text-dark);
   @media screen and (max-width: 576px) {
-    font-size: 3em;
+    font-size: 1.6em;
     margin: 1em 0;
   }
 `
