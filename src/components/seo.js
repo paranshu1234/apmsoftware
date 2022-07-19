@@ -80,7 +80,7 @@ function Seo({ description, lang, meta, title, image }) {
             ? [
                 {
                   property: "og:image",
-                  content: `${siteUrl}${defaultImage}`,
+                  content: `${site.siteMetadata?.siteUrl}${defaultImage}`,
                 },
                 {
                   name: "twitter:card",
