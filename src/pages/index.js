@@ -46,6 +46,7 @@ const Heading = styled.h1`
   @media screen and (max-width: 576px) {
     text-align: center;
     line-height: 1em;
+    font-size: 1.4em;
   }
 `
 
@@ -55,7 +56,7 @@ const SubTitle = styled.h3`
 
   @media screen and (max-width: 576px) {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 `
 
@@ -77,7 +78,7 @@ const BannerTextSmall = styled.p`
   color: var(--text-gray);
 
   @media screen and (max-width: 576px) {
-    font-size: 1.4em;
+    font-size: 1em;
     text-align: center;
   }
 `

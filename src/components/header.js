@@ -2,6 +2,8 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 const Head = styled.header`
   background-color: #fff;
@@ -24,7 +26,7 @@ const HeaderContianer = styled.div`
   padding: 1rem 1rem;
   border-bottom: 1px solid var(--bg-blue);
   @media screen and (max-width: 1200px) {
-    padding: 1 0.6rem;
+    padding: 1rem 0;
   }
 `
 
@@ -37,7 +39,7 @@ const NavLinks = styled.nav`
 
   @media screen and (max-width: 1200px) {
     display: none;
-    padding: 0 1rem;
+    padding: 0 0rem;
   }
 `
 const StyledLinkItem = styled(Link)`
@@ -66,12 +68,25 @@ const Button = styled.button`
   :hover {
     transform: translateY(-5px);
   }
+
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `
 
 const HeaderPlaceholder = styled.div`
   min-height: 20vh;
   @media screen and (max-width: 576px) {
     min-height: 15vh;
+  }
+`
+
+const StyledIcon = styled(FontAwesomeIcon)`
+  display: none;
+  font-size: 1.4em;
+  color: var(--text-dark);
+  @media screen and (max-width: 576px) {
+    display: block;
   }
 `
 
@@ -1133,6 +1148,7 @@ const Header = () => (
         >
           <Button>Contact Us</Button>
         </StyledLinkItem>
+        <StyledIcon icon={faBars} />
       </HeaderContianer>
     </Head>
     <HeaderPlaceholder></HeaderPlaceholder>

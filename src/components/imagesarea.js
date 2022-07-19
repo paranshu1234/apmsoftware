@@ -36,13 +36,17 @@ const Heading = styled.h1`
   font-size: 3em;
   line-height: 1.2em;
   color: var(--text-dark);
+
+  @media screen and (max-width: 576px) {
+    font-size: 2em;
+  }
 `
 
 const SubTitle = styled.h3`
   font-size: 1em;
   color: var(--text-red);
   @media screen and (max-width: 576px) {
-    font-size: 1.4em;
+    font-size: 1em;
   }
 `
 
@@ -66,7 +70,7 @@ const Paragraph = styled.p`
   padding: 2em 0;
   color: var(--text-gray);
   @media screen and (max-width: 576px) {
-    font-size: 2em;
+    font-size: 1em;
   }
 `
 
