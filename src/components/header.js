@@ -81,10 +81,8 @@ const HeaderPlaceholder = styled.div`
   }
 `
 
-const StyledIcon = styled(FontAwesomeIcon)`
+const StyledIcon = styled.svg`
   display: none;
-  font-size: 1.4em;
-  color: var(--text-dark);
   @media screen and (max-width: 576px) {
     display: block;
   }
@@ -1148,7 +1146,18 @@ const Header = () => (
         >
           <Button>Contact Us</Button>
         </StyledLinkItem>
-        <StyledIcon icon={faBars} />
+        <StyledIcon
+          width="22"
+          height="25"
+          viewBox="0 0 22 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.785714 6.44531H21.2143C21.6482 6.44531 22 6.09556 22 5.66406V3.71094C22 3.27944 21.6482 2.92969 21.2143 2.92969H0.785714C0.351754 2.92969 0 3.27944 0 3.71094V5.66406C0 6.09556 0.351754 6.44531 0.785714 6.44531ZM0.785714 14.2578H21.2143C21.6482 14.2578 22 13.9081 22 13.4766V11.5234C22 11.0919 21.6482 10.7422 21.2143 10.7422H0.785714C0.351754 10.7422 0 11.0919 0 11.5234V13.4766C0 13.9081 0.351754 14.2578 0.785714 14.2578ZM0.785714 22.0703H21.2143C21.6482 22.0703 22 21.7206 22 21.2891V19.3359C22 18.9044 21.6482 18.5547 21.2143 18.5547H0.785714C0.351754 18.5547 0 18.9044 0 19.3359V21.2891C0 21.7206 0.351754 22.0703 0.785714 22.0703Z"
+            fill="#15274F"
+          />
+        </StyledIcon>
       </HeaderContianer>
     </Head>
     <HeaderPlaceholder></HeaderPlaceholder>
