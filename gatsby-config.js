@@ -5,7 +5,7 @@ module.exports = {
     keywords: `Augmented Reality, Virtual Reality, Development, XR, VR, AR`,
     author: `@apmsoftware`,
     siteUrl: `https://apmsoftware.co.in`,
-    image: `/share.png`,
+    image: `/sharenew.png`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
