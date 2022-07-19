@@ -10,6 +10,9 @@ const ImagesSection = styled.section`
   max-width: 1080px;
   column-gap: 20px;
   grid-template-columns: repeat(2, minmax(10px, 1fr));
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, minmax(10px, 1fr));
+  }
 `
 
 const ImageThree = styled.div`
@@ -17,7 +20,17 @@ const ImageThree = styled.div`
   z-index: 99;
 `
 
-const Content = styled.div``
+const Content = styled.div`
+  @media screen and (max-width: 576px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1em;
+    grid-template-columns: repeat(1, minmax(10px, 1fr));
+  }
+`
 
 const Heading = styled.h1`
   font-size: 3em;
@@ -28,6 +41,9 @@ const Heading = styled.h1`
 const SubTitle = styled.h3`
   font-size: 1em;
   color: var(--text-red);
+  @media screen and (max-width: 576px) {
+    font-size: 1.4em;
+  }
 `
 
 const SubTitleContainer = styled.div`
@@ -35,12 +51,23 @@ const SubTitleContainer = styled.div`
   width: fit-content;
   padding: 1em;
   border-radius: 20px;
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    grid-template-columns: repeat(1, minmax(10px, 1fr));
+    margin-bottom: 1em;
+  }
 `
 
 const Paragraph = styled.p`
   line-height: 1.8em;
   padding: 2em 0;
   color: var(--text-gray);
+  @media screen and (max-width: 576px) {
+    font-size: 2em;
+  }
 `
 
 const ImagesArea = () => {

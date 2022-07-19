@@ -1,11 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Container = styled.section`
   text-align: center;
   padding: 4em 10em;
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, minmax(10px, 1fr));
+    padding: 0 2em;
+  }
 `
 
 const Heading = styled.h1`
@@ -17,6 +20,10 @@ const Heading = styled.h1`
 const SubTitle = styled.h3`
   font-size: 1em;
   color: var(--text-red);
+  @media screen and (max-width: 576px) {
+    font-size: 2em;
+    margin: 1em 0;
+  }
 `
 
 const SubTitleContainer = styled.div`
@@ -39,6 +46,9 @@ const Paragraph = styled.p`
   line-height: 1.8em;
   padding: 2em 0;
   color: var(--text-gray);
+  @media screen and (max-width: 576px) {
+    font-size: 2em;
+  }
 `
 
 const ServiceContainer = styled.div`
@@ -47,9 +57,17 @@ const ServiceContainer = styled.div`
   display: grid;
   column-gap: 4em;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, minmax(10px, 1fr));
+    column-gap: 2em;
+  }
 `
 const ServiceCardContent = styled.div`
   padding-top: 1em;
+  @media screen and (max-width: 576px) {
+    padding-top: 2em;
+    padding: 0 1em;
+  }
 `
 
 const ServiceCard = styled.div`

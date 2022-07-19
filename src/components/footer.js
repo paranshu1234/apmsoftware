@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 const Foot = styled.footer`
-  height: 80vh;
+  min-height: 80vh;
   width: 100%;
   background-color: var(--bg-blue);
 `
@@ -18,14 +18,24 @@ const Foot = styled.footer`
 const FooterContent = styled.div`
   width: inherit;
   display: grid;
-  justify-items: start;
-  justify-content: start;
-  align-items: start;
   margin: 0 auto;
   grid-template-columns: repeat(3, minmax(10px, 1fr));
-  grid-template-rows: min-content minmax(10px, 1fr) auto;
+  grid-template-rows: auto;
   max-width: 1080px;
-  flex-grow: 1;
+  grid-template-areas:
+    "logo logo logo"
+    "company service insights"
+    "bottom bottom bottom";
+  @media screen and (max-width: 576px) {
+    place-items: center;
+    grid-template-areas:
+      "logo"
+      "company "
+      "service "
+      "insights"
+      "bottom";
+    grid-template-columns: repeat(1, minmax(10px, 1fr));
+  }
 `
 
 const FooterBottomContent = styled.div`
@@ -37,43 +47,49 @@ const FooterBottomContent = styled.div`
   flex-flow: row wrap;
   margin-top: 2em;
   padding-top: 1em;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-area: bottom;
 `
 
 const ServicesContainer = styled.div`
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
   display: flex;
   flex-direction: column;
+  grid-area: service;
+  width: inherit;
+  @media screen and (max-width: 576px) {
+    padding: 0 1.4rem;
+  }
 `
 
 const InsightsContainer = styled.div`
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
   flex-direction: column;
   display: flex;
+  grid-area: insights;
+  width: inherit;
+  width: inherit;
+  @media screen and (max-width: 576px) {
+    padding: 0 1.4rem;
+  }
 `
 
 const CompanyLogoContainer = styled.div`
   padding: 2rem 0;
   width: min-content;
   max-height: min-content;
+
+  @media screen and (max-width: 576px) {
+    justify-self: start;
+    padding: 2rem 1.4rem;
+  }
 `
 
 const CompanyInfoContainer = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-
   flex-direction: column;
+  grid-area: company;
+  width: inherit;
+  width: inherit;
+  @media screen and (max-width: 576px) {
+    padding: 0 1.4rem;
+  }
 `
 
 const Heading = styled.h3`

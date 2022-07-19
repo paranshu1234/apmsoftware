@@ -33,6 +33,11 @@ const Heading = styled.h1`
   line-height: 1.2em;
   color: var(--text-dark);
   margin: 1em 0 0.4em 0;
+  @media screen and (max-width: 576px) {
+    font-size: 2.4em;
+    text-align: center;
+    line-height: 1.5em;
+  }
 `
 
 const Paragraph = styled.p`
@@ -41,6 +46,11 @@ const Paragraph = styled.p`
 
   padding: 0 0 1em 0;
   color: var(--text-gray);
+  @media screen and (max-width: 576px) {
+    font-size: 1.6em;
+    text-align: center;
+    line-height: 1.5em;
+  }
 `
 const Button = styled.button`
   margin: 2em 0;
@@ -58,6 +68,13 @@ const Button = styled.button`
 
   :hover {
     transform: translateY(-5px);
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 1.6em;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5em;
   }
 `
 

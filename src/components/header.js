@@ -7,101 +7,11 @@ const Head = styled.header`
   background-color: #fff;
 
   width: 100%;
-  padding: 0 8em;
+  padding: 0 8rem;
   position: fixed;
   z-index: 100;
-  @media (min-width: 640px) {
-    .container {
-      max-width: 640px;
-    }
-
-    .sm-text-xl {
-      font-size: 3em;
-    }
-
-    .sm-px-10 {
-      padding-left: 3.5rem;
-      padding-right: 3.5rem;
-    }
-  }
-
-  /* for large screen md (768px) */
-  @media (min-width: 768px) {
-    .container {
-      max-width: 768px;
-    }
-
-    .md-text-left {
-      text-align: left;
-    }
-
-    .md-mx-initial {
-      margin: initial;
-    }
-
-    .md-cols-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md-text-dark {
-      color: var(--text-dark2);
-    }
-  }
-
-  /* for large screen lg (1024px) */
-  @media (min-width: 1024px) {
-    .container {
-      max-width: 1024px;
-    }
-
-    #nav .toggle-btn > button {
-      display: none;
-    }
-
-    #nav {
-      flex-direction: row !important;
-      padding-left: 6rem !important;
-      padding-right: 6rem !important;
-    }
-
-    .collapse {
-      max-height: initial !important;
-    }
-
-    .collapse ul {
-      flex-direction: row !important;
-    }
-
-    .active {
-      max-height: 100% !important;
-    }
-
-    .lg-cols-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .lg-cols-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .lg-cols-4 {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-
-  /* for large screen xl (1280px) */
-  @media (min-width: 1280px) {
-    .container {
-      max-width: 1280px;
-    }
-
-    #nav {
-      background: transparent !important;
-    }
-
-    #nav .flex-initial ul button {
-      display: inline-block !important;
-    }
+  @media screen and (max-width: 1200px) {
+    padding: 0 1rem;
   }
 `
 
@@ -113,6 +23,9 @@ const HeaderContianer = styled.div`
   margin: 0 auto;
   padding: 1rem 1rem;
   border-bottom: 1px solid var(--bg-blue);
+  @media screen and (max-width: 1200px) {
+    padding: 1 0.6rem;
+  }
 `
 
 const NavLinks = styled.nav`
@@ -121,6 +34,11 @@ const NavLinks = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+    padding: 0 1rem;
+  }
 `
 const StyledLinkItem = styled(Link)`
   color: var(--text-dark2);
@@ -152,6 +70,9 @@ const Button = styled.button`
 
 const HeaderPlaceholder = styled.div`
   min-height: 20vh;
+  @media screen and (max-width: 576px) {
+    min-height: 15vh;
+  }
 `
 
 const Header = () => (

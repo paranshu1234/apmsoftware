@@ -9,12 +9,19 @@ const Container = styled.div`
   padding: 0 1em;
   max-width: 1090px;
   text-align: center;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+  }
 `
 
 const Itemwrapper = styled.div`
   display: grid;
   place-items: center;
   grid-template-columns: repeat(4, 1fr);
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 
 const LogoImage = styled.figure``
@@ -24,12 +31,19 @@ const Logowrapper = styled.div`
   svg {
     fill: #000;
   }
+  @media screen and (max-width: 576px) {
+    padding: 1em;
+  }
 `
 
 const Heading = styled.h1`
   font-size: 1.5em;
   line-height: 1.2em;
   color: var(--text-dark);
+  @media screen and (max-width: 576px) {
+    font-size: 3em;
+    margin: 1em 0;
+  }
 `
 
 const SVG = styled.svg``
