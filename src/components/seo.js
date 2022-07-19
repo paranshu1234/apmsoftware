@@ -57,10 +57,7 @@ function Seo({ description, lang, meta, title, image }) {
           property: `og:type`,
           content: `website`,
         },
-        {
-          property: "og:image",
-          content: `${site.siteMetadata?.siteUrl}${defaultImage}`,
-        },
+
         {
           name: `twitter:card`,
           content: `summary`,
@@ -77,11 +74,27 @@ function Seo({ description, lang, meta, title, image }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-        {
-          name: `twitter:image`,
-          content: `${site.siteMetadata?.siteUrl}${defaultImage}`,
-        },
-      ].concat(meta)}
+      ]
+        .concat(
+          defaultImage
+            ? [
+                {
+                  property: "og:image",
+                  content: `${siteUrl}${defaultImage}`,
+                },
+                {
+                  name: "twitter:card",
+                  content: "summary_large_image",
+                },
+              ]
+            : [
+                {
+                  name: "twitter:card",
+                  content: "summary",
+                },
+              ]
+        )
+        .concat(meta)}
     />
   )
 }

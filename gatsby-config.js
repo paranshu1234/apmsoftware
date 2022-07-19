@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `APM Software`,
-    description: `We will businesses build mixed reality experiences`,
+    description: `We help businesses build mixed reality experiences`,
     keywords: `Augmented Reality, Virtual Reality, Development, XR, VR, AR`,
     author: `@apmsoftware`,
     siteUrl: `https://apmsoftware.co.in`,
