@@ -71,7 +71,7 @@ const CardContentWrapper = styled.div``
 
 const CareerPage = () => (
   <Layout>
-    <Seo title="Contact Us" />
+    <Seo title="Careers" />
     <Container>
       <ContentContainer>
         <Heading>Join The APM Family</Heading>

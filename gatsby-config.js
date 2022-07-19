@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `APM Software`,
-    description: `We will build your business in the virtual world`,
+    description: `We will businesses build mixed reality experiences`,
+    keywords: `Augmented Reality, Virtual Reality, Development, XR, VR, AR`,
     author: `@apmsoftware`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://apmsoftware.co.in`,
+    image: `/share.png`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
