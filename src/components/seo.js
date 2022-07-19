@@ -59,7 +59,7 @@ function Seo({ description, lang, meta, title, image }) {
         },
         {
           property: "og:image",
-          content: `${site.siteMetadata?.author}${defaultImage}`,
+          content: `${site.siteMetadata?.siteUrl}${defaultImage}`,
         },
         {
           name: `twitter:card`,
@@ -79,7 +79,7 @@ function Seo({ description, lang, meta, title, image }) {
         },
         {
           name: `twitter:image`,
-          content: `${site.siteMetadata?.author}${defaultImage}`,
+          content: `${site.siteMetadata?.siteUrl}${defaultImage}`,
         },
       ].concat(meta)}
     />
