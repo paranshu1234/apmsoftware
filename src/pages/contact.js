@@ -11,7 +11,11 @@ const Container = styled.div`
   max-width: 1080px;
   margin: 0 auto;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 2em 0;
+  @media screen and (max-width: 576px) {
+    padding: 0 1em;
+  }
 `
 
 const ContentContainer = styled.div``
@@ -21,12 +25,20 @@ const FormContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 576px) {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 `
 
 const Form = styled.form`
   display: grid;
   column-gap: 1em;
   grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 576px) {
+    grid-template-columns: 1fr;
+    width: inherit;
+  }
 `
 
 const Heading = styled.h1`
@@ -55,6 +67,10 @@ const FieldProjectContainer = styled.div`
   flex-direction: column;
   grid-column-start: 1;
   grid-column-end: 3;
+  @media screen and (max-width: 576px) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
 `
 
 const Label = styled.span`
@@ -103,6 +119,11 @@ const InputProjectField = styled.textarea`
   :focus {
     border-color: #9b59b6;
   }
+
+  @media screen and (max-width: 576px) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
 `
 
 const Button = styled.button`
@@ -124,6 +145,10 @@ const Button = styled.button`
 
   :hover {
     transform: translateY(-5px);
+  }
+  @media screen and (max-width: 576px) {
+    grid-column-start: 1;
+    grid-column-end: 1;
   }
 `
 
