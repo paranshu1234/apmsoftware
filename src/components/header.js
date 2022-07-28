@@ -163,7 +163,7 @@ const StyledMenuIcon = styled.svg`
 `
 
 const Header = () => {
-  const [isOpen, setIsOpen] = React.useState(true)
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
     <>
