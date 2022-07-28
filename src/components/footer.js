@@ -132,6 +132,16 @@ const StyledIcon = styled(FontAwesomeIcon)`
 
 const StyledLinkItem = styled.a``
 
+const StyledInternalLinkItem = styled(Link)`
+  color: var(--text-dark2);
+  font-family: "system-ui";
+  transition: all 0.3s ease;
+
+  :hover {
+    color: var(--text-link);
+  }
+`
+
 const Footer = () => {
   return (
     <Foot>
@@ -1171,36 +1181,36 @@ const Footer = () => {
         </CompanyInfoContainer>
         <ServicesContainer>
           <Heading>Services</Heading>
-          <StyledLinkItem to="/services">
+          <StyledInternalLinkItem to="/services">
             <FooterLinks>XR marketing</FooterLinks>
-          </StyledLinkItem>
-          <StyledLinkItem to="/services">
+          </StyledInternalLinkItem>
+          <StyledInternalLinkItem to="/services">
             <FooterLinks>3D Modeling</FooterLinks>
-          </StyledLinkItem>
-          <StyledLinkItem to="/services">
+          </StyledInternalLinkItem>
+          <StyledInternalLinkItem to="/services">
             <FooterLinks>Virutal Reality</FooterLinks>
-          </StyledLinkItem>
-          <StyledLinkItem to="/services">
+          </StyledInternalLinkItem>
+          <StyledInternalLinkItem to="/services">
             <FooterLinks>Agumented Reality</FooterLinks>
-          </StyledLinkItem>
-          <StyledLinkItem to="/services">
+          </StyledInternalLinkItem>
+          <StyledInternalLinkItem to="/services">
             <FooterLinks>Retail Store Virtualization</FooterLinks>
-          </StyledLinkItem>
-          <StyledLinkItem to="/services">
+          </StyledInternalLinkItem>
+          <StyledInternalLinkItem to="/services">
             <FooterLinks>WebAR and NativeAR</FooterLinks>
-          </StyledLinkItem>
-          <StyledLinkItem to="/services">
+          </StyledInternalLinkItem>
+          <StyledInternalLinkItem to="/services">
             <FooterLinks>Metaverse Services for Enterprise</FooterLinks>
-          </StyledLinkItem>
+          </StyledInternalLinkItem>
         </ServicesContainer>
         <InsightsContainer>
           <Heading>Insights</Heading>
-          <StyledLinkItem to="/case-studies">
+          <StyledInternalLinkItem to="/case-studies">
             <FooterLinks>Case Studies</FooterLinks>
-          </StyledLinkItem>
-          <StyledLinkItem to="/about">
+          </StyledInternalLinkItem>
+          <StyledInternalLinkItem to="/about">
             <FooterLinks>Meet Our Team</FooterLinks>
-          </StyledLinkItem>
+          </StyledInternalLinkItem>
         </InsightsContainer>
         <FooterBottomContent>
           {" "}
