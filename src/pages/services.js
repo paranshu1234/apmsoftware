@@ -14,7 +14,7 @@ const Heading = styled.h1`
 `
 
 const BannerArea = styled.div`
-  height: 20vh;
+  min-height: 20vh;
   text-align: center;
 `
 const BannerText = styled.p`

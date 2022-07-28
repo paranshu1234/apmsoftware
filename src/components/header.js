@@ -53,6 +53,14 @@ const MobileNavLinks = styled.nav`
     min-height: 30vh;
     padding: 0 0rem;
   }
+
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 30vh;
+    padding: 0 0rem;
+  }
 `
 const StyledLinkItem = styled(Link)`
   color: var(--text-dark2);
@@ -61,6 +69,10 @@ const StyledLinkItem = styled(Link)`
 
   :hover {
     color: var(--text-link);
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-right: 1em;
   }
 `
 
@@ -78,6 +90,17 @@ const MobileStyledLinkItem = styled(Link)`
 const MobileMenuContainer = styled.div`
   display: none;
   @media screen and (max-width: 576px) {
+    display: ${props => (props.isOpen ? "block" : "none")};
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    padding: 1em;
+    z-index: 1000;
+    top: 12vh;
+    background: var(--bg-blue);
+  }
+
+  @media screen and (max-width: 1200px) {
     display: ${props => (props.isOpen ? "block" : "none")};
     min-height: 100vh;
     width: 100%;
@@ -132,6 +155,18 @@ const MenuIcon = styled.button`
     flex-direction: column;
   }
 
+  @media screen and (max-width: 1200px) {
+    display: block;
+    border: none;
+    cursor: pointer;
+    height: 1.8em;
+    width: auto;
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
   div {
     width: 1.5em;
     height: 0.2em;
@@ -155,11 +190,10 @@ const MenuIcon = styled.button`
   }
 `
 
-const StyledMenuIcon = styled.svg`
-  display: none;
-  @media screen and (max-width: 576px) {
-    display: block;
-  }
+const RightContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 const Header = () => {
@@ -1252,33 +1286,22 @@ const Header = () => {
               </MobileStyledLinkItem>
             </MobileNavLinks>
           </MobileMenuContainer>
-          <StyledLinkItem
-            to="/contact/"
-            style={{
-              textDecoration: `none`,
-            }}
-          >
-            <Button>Contact Us</Button>
-          </StyledLinkItem>
-          {/* <StyledMenuIcon
-            width="22"
-            height="25"
-            viewBox="0 0 22 25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <path
-              d="M0.785714 6.44531H21.2143C21.6482 6.44531 22 6.09556 22 5.66406V3.71094C22 3.27944 21.6482 2.92969 21.2143 2.92969H0.785714C0.351754 2.92969 0 3.27944 0 3.71094V5.66406C0 6.09556 0.351754 6.44531 0.785714 6.44531ZM0.785714 14.2578H21.2143C21.6482 14.2578 22 13.9081 22 13.4766V11.5234C22 11.0919 21.6482 10.7422 21.2143 10.7422H0.785714C0.351754 10.7422 0 11.0919 0 11.5234V13.4766C0 13.9081 0.351754 14.2578 0.785714 14.2578ZM0.785714 22.0703H21.2143C21.6482 22.0703 22 21.7206 22 21.2891V19.3359C22 18.9044 21.6482 18.5547 21.2143 18.5547H0.785714C0.351754 18.5547 0 18.9044 0 19.3359V21.2891C0 21.7206 0.351754 22.0703 0.785714 22.0703Z"
-              fill="#15274F"
-            />
-          </StyledMenuIcon> */}
+          <RightContainer>
+            <StyledLinkItem
+              to="/contact/"
+              style={{
+                textDecoration: `none`,
+              }}
+            >
+              <Button>Contact Us</Button>
+            </StyledLinkItem>
 
-          <MenuIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
-            <div />
-            <div />
-            <div />
-          </MenuIcon>
+            <MenuIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
+              <div />
+              <div />
+              <div />
+            </MenuIcon>
+          </RightContainer>
         </HeaderContianer>
       </Head>
       <HeaderPlaceholder></HeaderPlaceholder>

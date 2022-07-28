@@ -24,6 +24,11 @@ const Heading = styled.h1`
   font-size: 3em;
   line-height: 1.2em;
   color: var(--text-dark);
+
+  @media screen and (max-width: 576px) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
 `
 
 const MemberHeading = styled.h1`
@@ -41,6 +46,8 @@ const MemberPosition = styled.p`
 const BannerText = styled.p`
   font-size: 1.4em;
   line-height: 1.5em;
+  padding: 1em;
+  text-align: center;
   color: var(--text-dark);
 `
 
@@ -49,6 +56,11 @@ const TeamGrid = styled.div`
   display: grid;
   grid-gap: 1em;
   grid-template-columns: repeat(3, minmax(100px, 300px));
+
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, minmax(10px, 1fr));
+    place-items: center;
+  }
 `
 
 const TeamMember = styled.div`

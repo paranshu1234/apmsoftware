@@ -11,6 +11,10 @@ const Container = styled.section`
   margin: 0 auto;
 
   padding: 2em 0;
+  @media screen and (max-width: 576px) {
+    text-align: center;
+    padding: 1em;
+  }
 `
 
 const ContentContainer = styled.div``
@@ -50,6 +54,10 @@ const OpeningCard = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1em;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+  }
 `
 
 const CardHeading = styled.h1`
