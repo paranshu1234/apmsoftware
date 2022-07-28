@@ -130,7 +130,7 @@ const StyledIcon = styled(FontAwesomeIcon)`
   }
 `
 
-const StyledLinkItem = styled(Link)``
+const StyledLinkItem = styled.a``
 
 const Footer = () => {
   return (
@@ -1156,16 +1156,16 @@ const Footer = () => {
           <Paragraph>info@apmsoftware.co.in</Paragraph>
 
           <Heading>Follow Us</Heading>
-          <StyledLinkItem to="https://www.linkedin.com/company/apm-software/about/?viewAsMember=true">
+          <StyledLinkItem href="https://www.linkedin.com/company/apm-software/about/?viewAsMember=true">
             <StyledIcon icon={faLinkedin} />
           </StyledLinkItem>
-          <StyledLinkItem to="https://www.facebook.com/apmsoftwarein">
+          <StyledLinkItem href="https://www.facebook.com/apmsoftwarein">
             <StyledIcon icon={faFacebook} />
           </StyledLinkItem>
-          <StyledLinkItem to="https://www.youtube.com/channel/UCh9UEbJBS14bJ0e4KzAQtlQ/featured">
+          <StyledLinkItem href="https://www.youtube.com/channel/UCh9UEbJBS14bJ0e4KzAQtlQ/featured">
             <StyledIcon icon={faYoutube} />
           </StyledLinkItem>
-          <StyledLinkItem to="https://www.instagram.com/apm.software/">
+          <StyledLinkItem href="https://www.instagram.com/apm.software/">
             <StyledIcon icon={faInstagram} />
           </StyledLinkItem>
         </CompanyInfoContainer>

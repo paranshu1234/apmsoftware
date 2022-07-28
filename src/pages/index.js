@@ -65,6 +65,7 @@ const SubTitleContainer = styled.div`
   width: 100%;
   border-radius: 20px;
   margin-bottom: 1em;
+  padding: 1em;
 
   @media screen and (max-width: 576px) {
     padding: 0.8em;
