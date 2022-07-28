@@ -117,7 +117,7 @@ const AboutPage = () => (
           </TeamMember>
           <TeamMember>
             <StaticImage
-              src="../images/team/ruchit.jpg"
+              src="../images/team/Ruchit.jpg"
               loading="lazy"
               width={300}
               placeholder="blurred"
