@@ -8,6 +8,7 @@ module.exports = {
     image: `/sharenew.png`,
   },
   plugins: [
+    "gatsby-plugin-robots-txt",
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
