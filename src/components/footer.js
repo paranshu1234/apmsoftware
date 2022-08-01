@@ -118,7 +118,6 @@ const FooterLinks = styled.p`
 
 const SmallText = styled.small`
   padding-left: 1em;
-  color: var(--text-gray);
 `
 const StyledIcon = styled(FontAwesomeIcon)`
   color: var(--text-gray);
@@ -1181,34 +1180,34 @@ const Footer = () => {
         </CompanyInfoContainer>
         <ServicesContainer>
           <Heading>Services</Heading>
-          <StyledInternalLinkItem to="/services">
+          <StyledInternalLinkItem to="/services/">
             <FooterLinks>XR marketing</FooterLinks>
           </StyledInternalLinkItem>
-          <StyledInternalLinkItem to="/services">
+          <StyledInternalLinkItem to="/services/">
             <FooterLinks>3D Modeling</FooterLinks>
           </StyledInternalLinkItem>
-          <StyledInternalLinkItem to="/services">
+          <StyledInternalLinkItem to="/services/">
             <FooterLinks>Virutal Reality</FooterLinks>
           </StyledInternalLinkItem>
-          <StyledInternalLinkItem to="/services">
+          <StyledInternalLinkItem to="/services/">
             <FooterLinks>Agumented Reality</FooterLinks>
           </StyledInternalLinkItem>
-          <StyledInternalLinkItem to="/services">
+          <StyledInternalLinkItem to="/services/">
             <FooterLinks>Retail Store Virtualization</FooterLinks>
           </StyledInternalLinkItem>
-          <StyledInternalLinkItem to="/services">
+          <StyledInternalLinkItem to="/services/">
             <FooterLinks>WebAR and NativeAR</FooterLinks>
           </StyledInternalLinkItem>
-          <StyledInternalLinkItem to="/services">
+          <StyledInternalLinkItem to="/services/">
             <FooterLinks>Metaverse Services for Enterprise</FooterLinks>
           </StyledInternalLinkItem>
         </ServicesContainer>
         <InsightsContainer>
           <Heading>Insights</Heading>
-          <StyledInternalLinkItem to="/case-studies">
+          <StyledInternalLinkItem to="/case-studies/">
             <FooterLinks>Case Studies</FooterLinks>
           </StyledInternalLinkItem>
-          <StyledInternalLinkItem to="/about">
+          <StyledInternalLinkItem to="/about/">
             <FooterLinks>Meet Our Team</FooterLinks>
           </StyledInternalLinkItem>
         </InsightsContainer>
@@ -1221,8 +1220,12 @@ const Footer = () => {
             </SmallText>
           </span>
           <span>
-            <SmallText>Terms of Service</SmallText>
-            <SmallText>Privacy Policy</SmallText>
+            <StyledInternalLinkItem to="/privacy-policy/">
+              <SmallText>Privacy Policy</SmallText>
+            </StyledInternalLinkItem>
+            <StyledInternalLinkItem to="/terms-of-service/">
+              <SmallText>Terms of Service</SmallText>
+            </StyledInternalLinkItem>
           </span>
         </FooterBottomContent>
       </FooterContent>

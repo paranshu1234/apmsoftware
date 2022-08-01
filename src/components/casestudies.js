@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
+import { Link } from "gatsby"
+
 const Container = styled.section`
   text-align: start;
   padding: 0 12em;
@@ -67,6 +69,18 @@ const CaseStudyContent = styled.div`
   flex-direction: column;
 `
 
+const StyledInternalLinkItem = styled(Link)`
+  font-size: 1.2em;
+  width: fit-content;
+  color: var(--text-red);
+  font-family: "system-ui";
+  transition: all 0.3s ease;
+
+  :hover {
+    color: var(--text-link);
+  }
+`
+
 const CaseStudies = () => {
   return (
     <Container>
@@ -74,15 +88,20 @@ const CaseStudies = () => {
       <SubTitle>See Our Work</SubTitle>
       <CaseStudyCard>
         <CaseStudyContent>
-          <CaseStudyHeading>Collaboration Project With MQS</CaseStudyHeading>
+          <CaseStudyHeading>
+            Collaboration Project With Molecular Quantum Solutions (MQS)
+          </CaseStudyHeading>
           <Paragraph>
-            MQS (Molecular Quantam Solutions) copanhagen based startup, was
-            looking to create a real time 3d wind farm, as a startup they had
-            constraints on the budget. It was a innovative project with complex
-            mathemetical calculations happening on the go, APM Delivered the
-            project with excellence and the project will evolve into multiple
-            platforms in the future
+            Molecular Quantum Solutions (MQS) is a start-up based in Denmark
+            close to Copenhagen, was looking to create a real time 3D Wind Farm
+            Simulation. Their concept was unique with significant technical
+            challenges. Also, the project needed to suit a specific workflow
+            with Unreal Engine. They tapped our team at APM to develop the idea
+            and turn it into a functional solution.
           </Paragraph>
+          <StyledInternalLinkItem to="/case-study/mqs">
+            Read More
+          </StyledInternalLinkItem>
         </CaseStudyContent>
         <StaticImage
           src="../images/wind_farm.jpg"
