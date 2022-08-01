@@ -96,7 +96,7 @@ const ImagesArea = () => {
         <SubTitleContainer>
           <SubTitle>Metaverse Development Company</SubTitle>
         </SubTitleContainer>
-        <Heading>Ranked #1 AR/VR Development Company</Heading>
+        <Heading>AR/VR Development Company</Heading>
         <Paragraph>
           APM Software is an mixed reality developemnt agency building
           exceptional digital solutions. We've helped hundreds of brands create
