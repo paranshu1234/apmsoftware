@@ -1216,7 +1216,7 @@ const Header = () => {
           </div>
           <NavLinks>
             <StyledLinkItem
-              to="/services"
+              to="/services/"
               style={{
                 textDecoration: `none`,
               }}
@@ -1233,7 +1233,7 @@ const Header = () => {
               Case Studies
             </StyledLinkItem>
             <StyledLinkItem
-              to="/about"
+              to="/about/"
               style={{
                 textDecoration: `none`,
               }}
@@ -1252,7 +1252,7 @@ const Header = () => {
           <MobileMenuContainer isOpen={isOpen}>
             <MobileNavLinks>
               <MobileStyledLinkItem
-                to="/services"
+                to="/services/"
                 style={{
                   textDecoration: `none`,
                 }}
@@ -1269,7 +1269,7 @@ const Header = () => {
                 Case Studies
               </MobileStyledLinkItem>
               <MobileStyledLinkItem
-                to="/about"
+                to="/about/"
                 style={{
                   textDecoration: `none`,
                 }}
