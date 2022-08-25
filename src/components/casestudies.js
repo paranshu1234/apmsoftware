@@ -69,6 +69,11 @@ const CaseStudyContent = styled.div`
   flex-direction: column;
 `
 
+const LinkWrapper = styled.div`
+  width: 100%;
+  margin: 1em 0;
+`
+
 const StyledInternalLinkItem = styled(Link)`
   font-size: 1.2em;
   width: fit-content;
@@ -78,6 +83,11 @@ const StyledInternalLinkItem = styled(Link)`
 
   :hover {
     color: var(--text-link);
+  }
+
+  @media screen and (max-width: 576px) {
+    text-align: center;
+    margin: 1em 0;
   }
 `
 
@@ -99,9 +109,11 @@ const CaseStudies = () => {
             with Unreal Engine. They tapped our team at APM to develop the idea
             and turn it into a functional solution.
           </Paragraph>
-          <StyledInternalLinkItem to="/case-study/mqs">
-            Read More
-          </StyledInternalLinkItem>
+          <LinkWrapper>
+            <StyledInternalLinkItem to="/case-study/mqs">
+              Read More
+            </StyledInternalLinkItem>
+          </LinkWrapper>
         </CaseStudyContent>
         <StaticImage
           src="../images/wind_farm.jpg"
