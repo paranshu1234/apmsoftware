@@ -10,6 +10,7 @@ import ImagesArea from "../components/imagesarea"
 import OurServices from "../components/ourservices"
 import GetStarted from "../components/getstarted"
 import CaseStudies from "../components/casestudies"
+import { Helmet } from "react-helmet"
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
@@ -135,12 +136,20 @@ const StyledLinkItem = styled(Link)`
 const IndexPage = () => (
   <Layout>
     <Seo title="Leading AR/VR Metaverse Development Company" />
+    <Helmet>
+      <script
+        type="text/javascript"
+        src="https://widget.clutch.co/static/js/widget.js"
+        async
+      ></script>{" "}
+    </Helmet>
     <ContainerBanner>
       <ContentContainer>
         <TextContent>
           <SubTitleContainer>
             <SubTitle>Leading AR/VR Development Company</SubTitle>
           </SubTitleContainer>
+
           <Heading>We help businesses</Heading>
           <Heading>create virtual experiences</Heading>
           <BannerTextSmall>
@@ -172,6 +181,7 @@ const IndexPage = () => (
     <LogosListSection>
       <LogoList />
     </LogosListSection>
+
     <ImagesArea />
     <OurServices></OurServices>
     <CaseStudies />
