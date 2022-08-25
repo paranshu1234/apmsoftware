@@ -33,7 +33,10 @@ const StyledLink = styled.a`
 
 const ClutchWidget = () => {
   return (
-    <StyledLink href="https://clutch.co/profile/apm-software" target="_blank">
+    <StyledLink
+      href="https://clutch.co/profile/apm-software#summary"
+      target="_blank"
+    >
       {" "}
       <Widget>
         <svg
