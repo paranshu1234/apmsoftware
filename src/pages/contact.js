@@ -179,7 +179,7 @@ const ContactPage = () => (
           We would be happy to hear from you, <br /> please fill in the form or
           mail us your requirements on
         </Paragraph>
-        <Email>info@apmsoftware.co.in</Email>
+        <Email>info@apmsoftwaretechnologies.com</Email>
       </ContentContainer>
       <FormContainer>
         <Form
